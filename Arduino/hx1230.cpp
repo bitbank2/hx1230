@@ -1,5 +1,11 @@
 #include <Arduino.h>
-#include <avr/pgmspace.h>
+
+#if (defined(__AVR__))
+#include <avr\pgmspace.h>
+#else
+#include <pgmspace.h>
+#endif
+
 #include <hx1230.h>
 //
 // HX1230 LCD Library
